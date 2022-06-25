@@ -30,6 +30,8 @@ A principal funcionalidade deste projeto é fazer o Google Assistant rodar em um
 
 Antes de começar: Obtenha um Raspberry Pi, instale o sistema operacional Raspian, certifique-se que possui acesso a internet e certifique-se que possui o microfone e o fone, conforme o item :hammer: Funcionalidades do projeto.
 
+<h3> Criação do projeto no Google Cloud </h3>
+
 - `1º passo:` Acesse o endereço: https://console.actions.google.com/, crie um novo projeto no botão <b> NEW PROJECT </b>, dê um nome de sua preferência e salve o projeto.
 
 - ![image](https://user-images.githubusercontent.com/68716232/175789329-70c14247-7798-4577-b5d2-0a1d6aec1d44.png)
@@ -53,6 +55,21 @@ Antes de começar: Obtenha um Raspberry Pi, instale o sistema operacional Raspia
 `6º passo:` Pesquise por: Google Assistant API, selecione o serviço e clique no botão ativar.
 
 ![image](https://user-images.githubusercontent.com/68716232/175789820-fbf4aa96-2bfc-46bd-85fe-4eba23e29574.png)
+
+`7º passo:` Na próxima tela, vá até credenciais, depois configurar tela de consentimento, selecione a opção EXTERNO e depois clique no botão criar.
+
+![image](https://user-images.githubusercontent.com/68716232/175789887-f5d632b7-8355-4e67-af55-7e58827a065f.png)
+
+![image](https://user-images.githubusercontent.com/68716232/175789926-eeadc9e0-d5cc-4acb-a04b-63f79b623133.png)
+
+`7º passo:` Na tela de permissão OAUTH, insira seu e-mail nos dois campos indicados, salve e continue até voltar ao painel princial.
+
+![image](https://user-images.githubusercontent.com/68716232/175789982-3a4bf5ec-4d15-46de-ab77-89a21bf43879.png)
+
+![image](https://user-images.githubusercontent.com/68716232/175790010-12d3c9d5-fe93-4385-bf19-0017f79f44a8.png)
+
+
+<h3> Habilitando a permissão de APP terceiros </h3>
 
 
 
