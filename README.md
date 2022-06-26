@@ -1,7 +1,7 @@
 <h1 align="center"> Google Assistant on RaspberryPi </h1>
 
 <h2> Descrição do projeto </h2>
-<p> Assistente do Google rodando no Raspberry Pi via SDK </p>
+<p> Assistente do Google rodando no Raspberry Pi via SDK. </p>
 
 <h2> Status do projeto </h2>
 <h4 align="left"> VERSÃO 01 </h4>
@@ -29,6 +29,7 @@ A principal funcionalidade deste projeto é fazer o Google Assistant rodar em um
 <h2> ✍️ Hands on </h2>
 
 Antes de começar: Obtenha um Raspberry Pi, instale o sistema operacional Raspian, certifique-se que possui acesso a internet e certifique-se que possui o microfone e o fone, conforme o item :hammer: Funcionalidades do projeto.
+
 
 <h3> Criação do projeto no Google Cloud </h3>
 
@@ -71,7 +72,26 @@ Antes de começar: Obtenha um Raspberry Pi, instale o sistema operacional Raspia
 
 <h3> Habilitando a permissão de APP terceiros </h3>
 
+- Acesse o endereço: https://myaccount.google.com, acesse o controle de atividades (activity controls) e habilite o item: <i>Incluir atividade de voz e áudio. </i>.
 
+![image](https://user-images.githubusercontent.com/68716232/175830932-0757b6b4-54c4-4192-9be0-0826d3fea4c9.png)
+
+<b>Nota:</b> Certifique-se que está logado na mesma conta do google em todas etapas do projeto.
+
+
+<h3> Configurando os dispositivos de áudio </h3>
+
+- `1º passo:` Abra o terminal e digite o comando `arecord -l`, isso irá mostrar os dispositivos de gravação conectados no Raspberry Pi (no caso de dispositivos BT não aparece neste comando, mas vamos ver como testar seu funcionamento no passo 4.
+
+- `2º passo:` Digite o comando `speaker-test -t -wav`, para reproduzir um áudio teste.
+
+- `3º passo:` Digite o comando `arecord -- format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw`, isso irá gravar um áudio durante 5 segundo após pressionar enter.
+
+- `4º passo:` Digite o comando `aplay -- format=S16_LE --rate=16000 out.raw`, isso irá reproduzir o áudio gravado.
+
+- `5º passo:` Digite o comando `sudo apt-get update` e depois `sudo apt-get upgrade` para atualizar as possiveis modificações.
+
+<h3> Configurando o ambiente virtual para o Python </h3>
 
 
 
