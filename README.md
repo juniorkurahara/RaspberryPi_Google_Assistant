@@ -91,8 +91,59 @@ Antes de começar: Obtenha um Raspberry Pi, instale o sistema operacional Raspia
 
 - `5º passo:` Digite o comando `sudo apt-get update` e depois `sudo apt-get upgrade` para atualizar as possiveis modificações.
 
-<h3> Configurando o ambiente virtual para o Python </h3>
 
+<h3> Configurando um novo ambiente virtual para o Python </h3>
+
+Pressupondo que já possui o Python 3 ou superior...
+
+- `1º passo:` Digite  o comando `sudo apt-get install python3-dev python3-venv`
+
+- `2º passo:` Digite  o comando `python3 -m venv env`
+
+- `3º passo:` Digite  o comando `env/bin/python -m pip install --upgrade pip setuptools wheel`
+
+- `4º passo:` Digite  o comando `source env/bin/activate`
+
+
+<h3> Instalando as bibliotecas </h3>
+
+- `1º passo:` Digite  o comando `sudo apt-get install portaudio19-dev libffi-dev libssl-dev libmpg123-dev`
+
+- `2º passo:` Digite  o comando `python -m pip install --upgrade google-assistant-library`
+
+- `3º passo:` Digite  o comando `python -m pip install --upgrade google-assistant-sdk[samples]`
+
+
+<h3> Gerando as credenciais </h3>
+
+- `1º passo:` Digite  o comando `python -m pip install --upgrade google-auth-oauthlib[tool]`
+
+- `2º passo:` Copie o arquivo da credencial (Conforme 4º passo do item Criação do projeto no Google Cloud) e cole na pasta `home/pi`
+
+- `3º passo:` Digite  o comando `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless --client-secrets [cole aqui apenas o nome do arquivo da credencial com a extensão .json (Conforme 4º passo do item Criação do projeto no Google Cloud)]`
+
+![image](https://user-images.githubusercontent.com/68716232/175842189-3bc9138f-75a8-4883-83b8-21371022c279.png)
+
+- `4º passo:` Será necessário entrar no link fornecido para autorizar o acesso. Após autorizar, digite o código fornecido pelo Google no terminal
+
+![image](https://user-images.githubusercontent.com/68716232/175842493-d363020e-ea78-4629-a748-c8643091fd14.png)
+
+![image](https://user-images.githubusercontent.com/68716232/175842630-d8746c40-7481-4132-8737-04d9e23d928f.png)
+
+![image](https://user-images.githubusercontent.com/68716232/175842685-0de61624-00c8-47a6-9286-1dfec57adda0.png)
+
+- `5º passo:` Por fim, para rodar o modelo, digite o comando `googlesamples-assistant-hotword --project-id [ID do projeto] --device-model-id [nome do dispositivo]`
+
+
+- <b>Caso não tenha o ID do projeto e nome do dispositivo, sigam esses passos:</b>
+
+Acesse o site https://console.actions.google.com/, acesse seu projeto, nos 3 pontinhos no canto superior direito da tela acesse as configurações do projeto e pronto!
+
+![image](https://user-images.githubusercontent.com/68716232/175843215-25472f5e-d2e9-4b27-9df5-e969be3168aa.png)
+
+![image](https://user-images.githubusercontent.com/68716232/175843335-657727f0-79b7-4fc7-a8fc-2bb25f43bac8.png)
+
+Nota: No primeiro acesso, precisei confirmar meus dispositivos de áudio e não funcionou o comando de voz "OK GOOGLE", então fechei e abri o terminal e reescrevi os comandos a partir da etapa <i>Configurando um novo ambiente virtual para o Python</i>. Após isso funcionou muito bem! 😄 
 
 
 <h2> Autores </h2>
