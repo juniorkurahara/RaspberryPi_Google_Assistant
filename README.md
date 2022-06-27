@@ -10,7 +10,7 @@
 
 <h2> 🔧 Ferramentas necessárias </h2>
 
-- `Microfone`: Entrada de dados para o Google Assistant (Pode ser BT OU usb)
+- `Microfone`: Entrada de dados para o Google Assistant (Pode ser BT ou USB)
 - `Auto-falante / fone`: Saída de dados do Google Assistant (Pode ser BT, USB ou P2)
 - `Raspberry Pi (desejável versão 4)`: Processamento e interface do Google Assistant
 - `Conta no Google`: Item imprescindível 😆
